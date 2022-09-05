@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ferretería Benicio</title>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link type="text/css" rel="stylesheet" href="css/froala_blocks.css">
+    <style>
+      .fdb-block {
+        border-bottom: 1.8px solid var(--light);
+      }
+    </style>
+  </head>
+  <body><style>
+  body {
+    padding: 20px;
+    background-color: #DDDDDB;
+    color: black;
+    font-size: 18px;
+  }
+  h1 {
+    font-size: 40px;
+    text-shadow: -1px 0 white, 0 1px gray, 1px 0 gray, 0 -1px black;
+    font-family: serif; color: yellow;
+    color: orange;
+    }
+    h2 {
+      color:  darkorange;
+      font-family: serif;
+    }
+    h4 {
+      color: yellow;
+      text-shadow: -1px 0 black, 0 1px gray, 1px 0 gray, 0 -1px black;
+      font-size: 15 px;
+    }
+
+  .dark-mode {
+    background-color: black;
+    color: white;
+  }
+  
+  #navigator {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: url('images/background_grey.png') white;
+    width: 100%;
+  }
+
+  #navigator .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+
+  @media (max-width: 720px) {
+    #navigator {
+      border-bottom: 1px solid #ccc;
+    }
+  }
+
+  
+  #navigator a {
+    font-size: 14px;
+  }
+
+  #navigator+section {
+    padding: 250px 0;
+  }
+  
+  :root {
+    --body-color: #333;
+  }
+  
+
+</style>
+
+<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script>
+
+<section class="fdb-block p-2" id="navigator">
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-md">
+      <button class="navbar-toggler mr-auto ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav0" aria-controls="navbarNav0" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse mt-2 mt-md-0" id="navbarNav0">
+        <p class="m-auto">
+          <a class="btn btn-outline-primary m-1" href="inicio.html">Inicio</a>
+          <a class="btn btn-outline-primary m-1" href="catalogo.html">Catálogo</a>
+          <a class="btn btn-outline-primary m-1" href="datos.html">Datos de la Empresa</a>
+          <a class="btn btn-outline-primary m-1" href="registrarse.html">Registrarse</a>
+        </p>
+        <a class="btn btn-outline-primary m-1" onclick="myFunction()">Modo oscuro</a>
+      </div>
+    </nav>
+  </div>
+</section>
+
+<script>
+  var page = window.location.pathname.split('/')
+  page = page[page.length - 1]
+
+  var nav = document.querySelector('a[href="' + page + '"]')
+  if (nav) {
+    nav.classList.add('active')
+  }
+
+</script>
+
+    
+  
+    <!-- Forms 6 -->
+    <section class="fdb-block">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 col-lg-8 col-xl-6">
+            <div class="row">
+              <div class="col text-center">
+                <h2>Registrarse</h2>
+                <p class="lead">Puede registrarse para adquirir nuestros productos. </p>
+              </div>
+            </div>
+            <div class="row align-items-center">
+              <div class="col mt-4">
+                <input type="text" class="form-control" name="nombre" value="" placeholder="Nombre" />
+                <script type="text/javascript">
+                var campo = document.getElementById("cambiame");
+                campo.setAttribute("value",campo.value);
+                </script> 
+              </div>
+            </div>
+            <div class="row align-items-center mt-4">
+              <div class="col">
+                <input type="email" class="form-control" placeholder="Email">
+              </div>
+            </div>
+            <div class="row align-items-center mt-4">
+              <div class="col">
+                <input type="password" class="form-control" placeholder="Contraseña">
+              </div>
+              <div class="col">
+                <input type="password" class="form-control" placeholder="Confirme su contraseña">
+              </div>
+            </div>
+            <div class="row justify-content-start mt-4">
+              <div class="col">
+                <div class="form-check">
+                  <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input">
+                      He leído y acepto los <a href="https://www.froala.com">Términos y condiciones</a>
+                    </label>
+                </div>
+    
+                <button class="btn btn-primary mt-4">Aceptar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="fdb-block">
+      <div class="container">
+        <div>
+          <div class="row justify-content-center">
+            <form method="post">
+              <input type="text" name="Nombre" placeholder="Nombre">
+              <input type="text" name="Apellido" placeholder="Apellido">
+              <input type="submit" name="Aceptar" value="Submit">
+            </form>
+            <p><?php
+              if(isset($_POST['submit'])){
+                $nombre = "Nombre:".$_POST['nombre']."";
+                $apellido = "Apellido:".$_POST['apellido']."";
+                $file = fopen("/home/daniel/Ferreteria/file.txt", "a");
+                fwrite($file, $nombre);
+                fwrite($file, $apellido);
+                fclose($file);
+              }
+            ?>
+            </p>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+    
+    <!-- Forms 7 -->
+    <section class="fdb-block" style="background-image: url(imgs/hero/red.svg);">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 col-lg-7 col-xl-5 text-center">
+            <div class="fdb-box">
+              <div class="row">
+                <div class="col">
+                  <h1>Ingresar</h1>
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Email">
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col">
+                  <input type="password" class="form-control mb-1" placeholder="Password">
+                  <p class="text-right"><a href="https://www.froala.com">Recordar contraseña</a></p>
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col">
+                  <button class="btn btn-outline-secondary" type="button">Entrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    
+  </body>
+</html>
+
